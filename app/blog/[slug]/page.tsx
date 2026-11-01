@@ -46,9 +46,9 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       </header>
 
       {post.cover ? (
-        <div className="container-site max-w-5xl">
-          <div className="relative aspect-[16/9] overflow-hidden">
-            <Image src={post.cover} alt="" fill priority sizes="(min-width:1024px) 1024px, 100vw" className="object-cover" />
+        <div className="container-site max-w-3xl">
+          <div className="relative mx-auto aspect-square max-w-xl overflow-hidden">
+            <Image src={post.cover} alt="" fill priority sizes="(min-width:640px) 576px, 100vw" className="object-cover" />
           </div>
         </div>
       ) : null}

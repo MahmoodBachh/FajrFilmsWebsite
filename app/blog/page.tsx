@@ -35,10 +35,10 @@ export default function BlogIndex() {
           ) : (
             <>
               <Reveal>
-                <Link href={`/blog/${lead.slug}`} className="group grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-end">
-                  <div className="relative aspect-[16/9] overflow-hidden bg-ink">
+                <Link href={`/blog/${lead.slug}`} className="group grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-14">
+                  <div className="relative aspect-square overflow-hidden bg-ink">
                     {lead.cover ? (
-                      <Image src={lead.cover} alt="" fill sizes="(min-width:1024px) 60vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
+                      <Image src={lead.cover} alt="" fill sizes="(min-width:1024px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
                     ) : (
                       <CoverFallback />
                     )}
@@ -58,7 +58,7 @@ export default function BlogIndex() {
                     <li key={p.slug}>
                       <Reveal delay={(i % 3) * 0.08}>
                         <Link href={`/blog/${p.slug}`} className="group block">
-                          <div className="relative aspect-[4/3] overflow-hidden bg-ink">
+                          <div className="relative aspect-square overflow-hidden bg-ink">
                             {p.cover ? (
                               <Image src={p.cover} alt="" fill sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
                             ) : (
