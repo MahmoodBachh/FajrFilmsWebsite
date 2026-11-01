@@ -51,7 +51,7 @@ export default function CollectiveForm() {
       <div role="status" className="rounded-xl bg-white p-10 text-center text-night shadow-[0_20px_60px_rgba(10,19,34,0.12)]">
         <p className="text-4xl font-bold text-crimson">Welcome to the Collective.</p>
         <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed">
-          JazakAllahu khayran for signing up. We’ll be in touch by email with next steps and upcoming opportunities.
+          Jazak Allahu Khayran for signing up. We’ll be in touch by e-mail with next steps and upcoming opportunities.
         </p>
       </div>
     );
