@@ -31,7 +31,7 @@ function parse(file: string) {
     date: data.date ? new Date(data.date).toISOString() : new Date(0).toISOString(),
     excerpt: String(data.excerpt ?? ""),
     cover: data.cover ? String(data.cover) : undefined,
-    author: String(data.author ?? "Fajr Films"),
+    author: String(data.author ?? "Mahmood Bachh"),
     readingMinutes: Math.max(1, Math.round(words / 220)),
   };
   return { post, content };
