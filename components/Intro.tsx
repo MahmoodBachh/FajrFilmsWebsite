@@ -8,9 +8,9 @@ export default function Intro() {
         <Reveal>
           <p className="label !text-crimson">WHAT IS FAJR FILMS</p>
           <h2 className="mt-4 font-bold leading-[0.95] tracking-[-0.015em]" style={{ fontSize: "clamp(2.5rem, 4.6vw, 4.5rem)" }}>
-            Faith-rooted.
-            <br />
             Community-first.
+            <br />
+            Rooted in faith.
             <br />
             <span className="text-crimson">Cinematic.</span>
           </h2>
