@@ -30,7 +30,8 @@ function parse(file: string) {
     title: String(data.title ?? "Untitled"),
     date: data.date ? new Date(data.date).toISOString() : new Date(0).toISOString(),
     excerpt: String(data.excerpt ?? ""),
-    cover: data.cover ? String(data.cover) : undefined,
+    // Only use the cover if the image is actually in public/ (otherwise a branded placeholder shows)
+    cover: data.cover && fs.existsSync(path.join(process.cwd(), "public", String(data.cover))) ? String(data.cover) : undefined,
     author: String(data.author ?? "Mahmood Bachh"),
     readingMinutes: Math.max(1, Math.round(words / 220)),
   };
