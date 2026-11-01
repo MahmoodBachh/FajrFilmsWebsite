@@ -21,7 +21,7 @@ const config: Config = {
       maxWidth: { site: "1280px" },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 
 export default config;

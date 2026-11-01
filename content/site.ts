@@ -1,5 +1,8 @@
 // ─────────────────────────────────────────────────────────────
-// All homepage content lives here. Edit text, numbers, projects,
+// Site-wide settings and all homepage content live here.
+// Courses: content/courses.ts · Blog posts: content/blog/*.md ·
+// Collective benefits and form options: content/collective.ts
+// Edit text, numbers, projects,
 // team and links in this one file — no need to touch components.
 // Anything in [brackets] is a placeholder waiting for real info.
 // ─────────────────────────────────────────────────────────────
@@ -14,9 +17,13 @@ export const site = {
   phone: "(587) 778-7393",
   phoneHref: "tel:+15877787393",
   location: "Edmonton, AB, Canada",
-  bookingUrl: "https://www.fajrfilms.ca/book-appointment",
-  collectiveUrl: "https://fajrfilms.as.me/thefajrcollective",
-  coursesUrl: "https://www.fajrfilms.ca/courses",
+  bookingUrl: "/book",
+  collectiveUrl: "/collective",
+  coursesUrl: "/courses",
+  // The Acuity scheduler shown on /book. Paste your free-consult link here
+  // (e.g. "https://fajrfilms.as.me/free-consult"). The bare link shows every
+  // appointment type you've made public.
+  acuityUrl: "https://fajrfilms.as.me/",
   // Paste a YouTube or Vimeo link here once the showreel is ready.
   showreelUrl: "",
   socials: [
@@ -30,11 +37,11 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Work", href: "#work" },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#team" },
-  { label: "Collective", href: "#collective" },
-  { label: "Courses", href: "#collective" },
+  { label: "Work", href: "/#work" },
+  { label: "Services", href: "/#services" },
+  { label: "Courses", href: "/courses" },
+  { label: "Collective", href: "/collective" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export const stats = [

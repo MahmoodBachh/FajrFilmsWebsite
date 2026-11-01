@@ -79,7 +79,7 @@ export default function Footer() {
           <p className="flex items-center gap-3">
             <Image src="/images/fajr-mark.svg" alt="" width={32} height={32} />© {new Date().getFullYear()} Fajr Films · Illuminating Your Story
           </p>
-          <a href="#main" className="hover:text-amber">
+          <a href="#top" className="hover:text-amber">
             Back to top ↑
           </a>
         </div>

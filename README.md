@@ -34,6 +34,27 @@ Copy one of the objects in the `projects` list in `content/site.ts`, drop its th
 
 Paste the YouTube or Vimeo link into `showreelUrl` in `content/site.ts`. Until then, "Play showreel" opens the YouTube channel.
 
+## Pages
+
+| Page | Edit content in | Notes |
+| --- | --- | --- |
+| `/book` | `acuityUrl` in `content/site.ts` | Embeds your Acuity scheduler. Paste your free-consult link (Acuity → Scheduling Page → Share → direct link to the appointment type). |
+| `/collective` | `content/collective.ts` | Sign-up form sends to Formspree (see below). |
+| `/courses` and `/courses/<slug>` | `content/courses.ts` | Paste a Stripe Payment Link into `stripeLink` to show "Enrol now". Empty = "Join the waitlist" (emails you). |
+| `/blog` and `/blog/<slug>` | `content/blog/*.md` | One Markdown file per post. Copy `_template.md` to start. |
+
+### Connecting the Collective form (Formspree)
+
+1. Create a free form at https://formspree.io and copy its endpoint (`https://formspree.io/f/xxxxxxx`).
+2. In Vercel → your project → Settings → Environment Variables, add `NEXT_PUBLIC_FORMSPREE_COLLECTIVE` with that URL, then redeploy.
+3. For local testing, put the same line in a `.env.local` file.
+
+Until it's set, the form tells people to email you instead.
+
+### Writing a blog post
+
+Copy `content/blog/_template.md` to `content/blog/your-post-name.md` (the file name becomes the URL), fill in the top section, and write the post in Markdown. Put photos in `public/images/blog/`. Files whose names start with `_` are never published.
+
 ## Put it online (Vercel)
 
 1. Create a new GitHub repository and push this folder to it.

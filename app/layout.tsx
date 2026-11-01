@@ -8,6 +8,8 @@ import "@fontsource/titillium-web/900.css";
 import "@fontsource/cairo/arabic-700.css";
 import "./globals.css";
 import { site } from "@/content/site";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -44,11 +46,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
   return (
     <html lang="en-CA">
-      <body>
+      <body id="top">
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-amber focus:px-4 focus:py-2 focus:text-night">
           Skip to content
         </a>
-        {children}
+        <Nav />
+        <main id="main">{children}</main>
+        <Footer />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       </body>
     </html>
