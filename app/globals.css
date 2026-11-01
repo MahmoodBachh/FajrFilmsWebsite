@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-night font-sans text-cream antialiased;
+  }
+  ::selection {
+    @apply bg-amber text-night;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-site px-5 sm:px-8 lg:px-16;
+  }
+
+  /* Amber caps label with the small crimson corner bracket from the IG feed */
+  .label {
+    @apply relative inline-block pb-1 pl-4 text-sm font-semibold tracking-label text-amber;
+  }
+  .label::before {
+    content: "";
+    @apply absolute bottom-0 left-0 h-3 w-2.5 border-b-2 border-l-2 border-crimson-light;
+  }
+
+  .display-xl {
+    @apply font-bold leading-[0.88] tracking-[-0.02em];
+    font-size: clamp(3.5rem, 9vw, 8.25rem);
+  }
+  .display-lg {
+    @apply font-bold leading-[0.92] tracking-[-0.015em];
+    font-size: clamp(2.75rem, 6vw, 5.75rem);
+  }
+  .glow {
+    text-shadow: 0 0 40px rgba(251, 198, 135, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
